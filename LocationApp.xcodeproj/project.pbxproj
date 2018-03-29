@@ -13,6 +13,11 @@
 		0AD3D52E20299E68004168AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD3D52D20299E68004168AD /* Assets.xcassets */; };
 		0AD3D53120299E68004168AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD3D52F20299E68004168AD /* LaunchScreen.storyboard */; };
 		0AD3D53420299E68004168AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D53320299E68004168AD /* main.m */; };
+		0AD3D53C2029A1C5004168AD /* ChangeLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D53B2029A1C5004168AD /* ChangeLocation.m */; };
+		0AD3D53F2029A1F0004168AD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3D53E2029A1F0004168AD /* CoreLocation.framework */; };
+		0AD3D5412029B7BF004168AD /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0AD3D5402029A3C9004168AD /* Location.gpx */; };
+		0AD3D5442029CD6B004168AD /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D5432029CD6A004168AD /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0AD3D5462029CDEE004168AD /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3D5452029CDEE004168AD /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,13 @@
 		0AD3D53020299E68004168AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AD3D53220299E68004168AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AD3D53320299E68004168AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AD3D53A2029A1C5004168AD /* ChangeLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeLocation.h; sourceTree = "<group>"; };
+		0AD3D53B2029A1C5004168AD /* ChangeLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeLocation.m; sourceTree = "<group>"; };
+		0AD3D53E2029A1F0004168AD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0AD3D5402029A3C9004168AD /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		0AD3D5422029CD6A004168AD /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		0AD3D5432029CD6A004168AD /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		0AD3D5452029CDEE004168AD /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD3D5462029CDEE004168AD /* libxml2.tbd in Frameworks */,
+				0AD3D53F2029A1F0004168AD /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +58,7 @@
 			children = (
 				0AD3D52320299E68004168AD /* LocationApp */,
 				0AD3D52220299E68004168AD /* Products */,
+				0AD3D53D2029A1EF004168AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +77,11 @@
 				0AD3D52520299E68004168AD /* AppDelegate.m */,
 				0AD3D52720299E68004168AD /* ViewController.h */,
 				0AD3D52820299E68004168AD /* ViewController.m */,
+				0AD3D53A2029A1C5004168AD /* ChangeLocation.h */,
+				0AD3D53B2029A1C5004168AD /* ChangeLocation.m */,
+				0AD3D5402029A3C9004168AD /* Location.gpx */,
+				0AD3D5422029CD6A004168AD /* GDataXMLNode.h */,
+				0AD3D5432029CD6A004168AD /* GDataXMLNode.m */,
 				0AD3D52A20299E68004168AD /* Main.storyboard */,
 				0AD3D52D20299E68004168AD /* Assets.xcassets */,
 				0AD3D52F20299E68004168AD /* LaunchScreen.storyboard */,
@@ -69,6 +89,15 @@
 				0AD3D53320299E68004168AD /* main.m */,
 			);
 			path = LocationApp;
+			sourceTree = "<group>";
+		};
+		0AD3D53D2029A1EF004168AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AD3D5452029CDEE004168AD /* libxml2.tbd */,
+				0AD3D53E2029A1F0004168AD /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +160,7 @@
 			files = (
 				0AD3D53120299E68004168AD /* LaunchScreen.storyboard in Resources */,
 				0AD3D52E20299E68004168AD /* Assets.xcassets in Resources */,
+				0AD3D5412029B7BF004168AD /* Location.gpx in Resources */,
 				0AD3D52C20299E68004168AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +174,8 @@
 			files = (
 				0AD3D52920299E68004168AD /* ViewController.m in Sources */,
 				0AD3D53420299E68004168AD /* main.m in Sources */,
+				0AD3D5442029CD6B004168AD /* GDataXMLNode.m in Sources */,
+				0AD3D53C2029A1C5004168AD /* ChangeLocation.m in Sources */,
 				0AD3D52620299E68004168AD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = LocationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.LocationApp;
@@ -294,6 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = LocationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.LocationApp;
